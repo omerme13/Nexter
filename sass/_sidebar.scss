@@ -2,4 +2,58 @@
     background: $color-primary;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.nav-btn {
+    border: none;
+    background: white;
+    width: 4.5rem;
+    height: 3px;
+    margin-top: 4rem;
+    position: fixed;
+
+    @media(max-width: $bp-large) {
+        position: relative;
+        margin-top: 0;
+        margin-right: 3rem;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        background: white;
+        width: 4.5rem;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        
+    }
+
+    &::before {
+        top: -1.5rem;
+
+        @media(max-width: $bp-large) {
+            top: -1.2rem;
+        }    
+    }
+
+    &::after {
+        top: 1.5rem;
+
+        @media(max-width: $bp-large) {
+            top: 1.2rem;
+        }   
+    }
+
 }
