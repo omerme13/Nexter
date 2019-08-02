@@ -29,7 +29,7 @@ body {
   @media (max-width: 62.5em) {
     .container {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-      grid-template-rows: 8rem min-content 40vw repeat(3, min-content); } }
+      grid-template-rows: 8rem; } }
   @media (max-width: 50em) {
     .container {
       grid-template-rows: 8rem calc(100vh - 8rem); } }
